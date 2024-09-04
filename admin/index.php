@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+if (!isset($SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: ../login.php");
     exit;
 }
@@ -70,7 +70,7 @@ $result = mysqli_query($conn, $query);
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <div class="logout">
             <a href="../logout.php">Logout</a>
         </div>
